@@ -1,0 +1,67 @@
+.background{
+    background: #e7eaf3;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    margin-top: 100px;
+    padding: 20px 0px;
+    background-color: #e7eaf3;
+}
+.footer h3{
+    margin-bottom: 30px;
+    position: relative;
+}
+.footer h3::after{
+    width: 100px;
+    height: 3px;
+    background: orange;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    content: "";
+}
+.footer .logo{
+    width: 30%;
+}
+.footer .logo img{
+    width: 100%;
+}
+.footer .departments{
+    width: 20%;
+}
+.footer .departments ul{
+    padding-left: 0;
+}
+.footer .departments ul li{
+    list-style: none;
+}
+.footer .opening{
+    width: 20%;
+}
+.footer .opening .opening-flex{
+    display: flex;
+    justify-content: space-between;
+}
+.footer .touch{
+    width: 20%;
+}
+
+@media screen and (max-width: 600px){
+    .footer{
+        display: block;
+    }
+    .footer .logo{
+        width: 100%;
+    }
+    .footer .departments{
+        width: 100%;
+    }
+    .footer .opening{
+        width: 100%;
+    }
+    .footer .touch{
+        width: 100%;
+    }
+}

@@ -1,0 +1,55 @@
+.articles .flex{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.articles .flex .item{
+    display: flex;
+    width: 49%;
+    border: 1px solid #a3a3a3;
+    margin-bottom: 20px;
+}
+.articles .flex .item .image{
+    width: 50%;
+}
+.articles .flex .item .image img{
+    width: 100%;
+    height: 300px;
+}
+.articles .flex .item .text{
+    width: 50%;
+    padding: 30px 20px;
+    text-align: left;
+    color: #a3a3a3;
+}
+.articles .flex .item .text button{
+    background: #ba71da;
+    border-radius: 30px;
+    padding: 5px 20px;
+    border: none;
+}
+.articles .flex .item .text-one{
+    background: #1bbc9b;
+    color: white;
+}
+.articles .flex .item .text-two{
+    background: #14b9d5;
+    color: white;
+}
+.articles .flex .item .text-three{
+    background: white;
+    color: #a3a3a3;
+}
+.articles .flex .item .first button{
+    color: white;
+}
+.articles .flex .item .text-one button{
+    background: white;
+}
+.articles .flex .item .text-two button{
+    background: white;
+}
+.articles .flex .item .text-three button{
+    background: #f76570;
+    color: white;
+}
