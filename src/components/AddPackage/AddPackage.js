@@ -1,14 +1,16 @@
 import React, { useRef } from 'react';
 
 const AddPackage = () => {
-    const nameRef= useRef();
-    const emailRef= useRef();
     const imageRef= useRef();
+    const placeRef= useRef();
+    const nameRef= useRef();
+    const amountRef= useRef();
     const handleAddPackage = e => {
-        const name = nameRef.current.value;
-        const email = emailRef.current.value;
         const image= imageRef.current.value;
-        const packageInfo = {name, email, image};
+        const place= placeRef.current.value;
+        const name = nameRef.current.value;
+        const amount = amountRef.current.value;
+        const packageInfo = {image, place, name, amount};
         fetch('http://localhost:4000/packages', {
             method: 'post',
             headers:{
@@ -30,8 +32,9 @@ const AddPackage = () => {
             <h2>Add Package</h2>
             <form onSubmit={handleAddPackage}>
                 <input type="url" placeholder="Enter Image URL" ref={imageRef}></input>
-                <input type="text" placeholder="Enter Package Place" ref={nameRef}></input>
-                <input type="email" placeholder="Enter Package Name" ref={emailRef}></input>
+                <input type="text" placeholder="Enter Place" ref={placeRef}></input>
+                <input type="text" placeholder="Enter Name" ref={nameRef}></input>
+                <input type="text" placeholder="Enter Amount" ref={amountRef}></input>
                 <input type="submit" value="Add Package"></input>
             </form>
         </div>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import './Packages.css';
 
 const Packages = () => {
     const [packages, setPackages] = useState([]);
@@ -9,15 +10,25 @@ const Packages = () => {
         .then(data => setPackages(data))
     }, [])
     return (
-        <div>
+        <div className='packages'>
             Packages: {packages.length}
+            <div className='display'>
             {
                 packages.map(packages => 
-                <div>
-                    <button>Details</button>
-                    <Link to='/Booking'>Book Now</Link>
-                </div>)
+                <div className='item'>
+                    <div className='image'>
+                        <img src={packages.image} alt=''></img>
+                    </div>
+                    <div>
+                        <p>{packages.place}</p>
+                        <h4>{packages.name}</h4>
+                        <p>{packages.amount}</p>
+                        <button>Details</button>
+                        <Link to='/Booking'>Book Now</Link>
+                    </div>
+                </div>) 
             }
+            </div>
         </div>
     );
 };

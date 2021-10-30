@@ -22,10 +22,7 @@ const useFirebase = () =>{
     }
 
     const signInWithGitHub = () =>{
-        signInWithPopup(auth, githubProvider)
-        .then( (result) => {
-            setUser(result.user);
-        })
+        return signInWithPopup(auth, githubProvider)
     }
 
     useEffect( () => {

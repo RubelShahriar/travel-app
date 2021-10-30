@@ -16,10 +16,17 @@ const LogIn = () => {
             history.push(redirect_uri);
         })
     }
+    const handleGithubLogIn = () => {
+        signInWithGitHub()
+        .then(result => {
+            console.log(result.user);
+            history.push(redirect_uri);
+        })
+    }
     return (
         <div>
               <Button onClick={handleGoogleLogIn} variant="warning">login</Button>
-              <Button onClick={signInWithGitHub} variant="warning">github login</Button>
+              <Button onClick={handleGithubLogIn} variant="warning">github login</Button>
         </div>
     );
 };
