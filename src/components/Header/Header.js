@@ -1,9 +1,12 @@
 import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 import './Header.css';
 
 const Header = () => {
+    const {user, logOut,signInWithGoogle} = useAuth();
+    console.log(user)
     return (
         <Navbar bg="light" expand="lg">
             <Container>
@@ -18,9 +21,14 @@ const Header = () => {
                     
                 </Nav>
                 <Navbar.Text className='nav-item'>
-                    Signed in as: <a href="#login">Mark Otto</a>
+                    Signed in as: <a href="#login">{user.displayName}</a>
                 </Navbar.Text>
-                <Button className='nav-item-color' variant="success">LOGIN</Button>
+                {
+                    user.displayName ? 
+                    <Button onClick={logOut} className='nav-item-color' variant="success">LogOut</Button> 
+                    :
+                    <Button onClick={signInWithGoogle} className='nav-item-color' variant="success">LogIn</Button>
+                }
                 </Navbar.Collapse>
             </Container>
         </Navbar>
