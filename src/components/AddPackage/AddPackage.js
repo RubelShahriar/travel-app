@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import './AddPackage.css';
 
 const AddPackage = () => {
     const imageRef= useRef();
@@ -28,14 +29,14 @@ const AddPackage = () => {
         e.preventDefault();
     }
     return (
-        <div>
-            <h2>Add Package</h2>
+        <div className='add-package'>
+            <h2>Add a new package</h2>
             <form onSubmit={handleAddPackage}>
                 <input type="url" placeholder="Enter Image URL" ref={imageRef}></input>
                 <input type="text" placeholder="Enter Place" ref={placeRef}></input>
                 <input type="text" placeholder="Enter Name" ref={nameRef}></input>
                 <input type="text" placeholder="Enter Amount" ref={amountRef}></input>
-                <input type="submit" value="Add Package"></input>
+                <input type="submit" className='submit' value="Add Package"></input>
             </form>
         </div>
     );

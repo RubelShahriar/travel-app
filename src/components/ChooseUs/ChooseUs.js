@@ -1,6 +1,5 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUserCheck, } from '@fortawesome/free-solid-svg-icons'
 import { faUser,faHandshake, faImages, faSmile} from '@fortawesome/free-regular-svg-icons'
 import './ChooseUs.css';
 

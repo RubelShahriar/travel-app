@@ -45,16 +45,18 @@ const PackageDetails = () => {
     }
     return (
         <div className='pacakge-details'>
+                <h2>Place An Order </h2>
             <div className='background'>
-                <h4>Place An Order {packageItem.name} {id}</h4>
             </div>
             <div className='details-flex'>
                 <div className='left'>
-                    <img src={image} alt=''></img>
-                    <p>Details para</p>
+                    <img src={packageItem.image} alt=''></img>
+                    <p>place review: {packageItem.place}</p>
+                    <h3>Package Name: <span>{packageItem.name}</span></h3>
+                    <button className='may'>May its a greate value for you</button>
                 </div>
                 <div className='right'>
-                    <h2>Booking Package</h2>
+                    <h3>Book Your Package</h3>
                     <div>
                         <form onSubmit={handleDetailsForm}>
                         <input type="text" value={user.displayName}></input>
@@ -63,7 +65,7 @@ const PackageDetails = () => {
                         <input type="text" value={packageItem.place} ref={placeRef}></input>
                         <input type="text" value={packageItem.name} ref={nameRef}></input>
                         <input type="text" value={packageItem.amount} ref={amountRef}></input>
-                            <input type='submit' value='Book Now'></input>
+                            <input type='submit' className='booking' value='Book Now'></input>
                         </form>
                     </div>
                 </div>

@@ -11,7 +11,7 @@ const Packages = () => {
     }, [])
     return (
         <div className='packages'>
-            Packages: {packages.length}
+            <h2>Our Populer Packages</h2>
             <div className='display'>
             {
                 packages.map(packages => 
@@ -23,7 +23,7 @@ const Packages = () => {
                         <p>{packages.place}</p>
                         <h4>{packages.name}</h4>
                         <p>{packages.amount}</p>
-                        <Link to={`/package-details/${packages._id}`}><button>Details</button></Link>
+                        <Link to={`/package-details/${packages._id}`}><button className='button'>Details</button></Link>
                     </div>
                 </div>) 
             }

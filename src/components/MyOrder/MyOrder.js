@@ -30,7 +30,7 @@ const MyOrder = () => {
     
     return (
         <div className='orders'>
-            order: {order.length}
+            <h2>Your Orders</h2>
             <div className='display'>
             {
                 order.map(order => 
@@ -39,10 +39,10 @@ const MyOrder = () => {
                         <img src={order.image} alt=''></img>
                     </div>
                     <div>
-                        <p>{order.place}</p>
+                        <p>{order.place}</p> 
                         <h4>{order.name}</h4>
                         <p>{order.amount}</p>
-                        <button onClick={() => handleDeleteOrder(order._id)}>Delete</button>
+                        <button className='button' onClick={() => handleDeleteOrder(order._id)}>Delete Order</button>
                     </div>
                 </div>) 
             }

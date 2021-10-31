@@ -1,3 +1,8 @@
+.navbar span{
+    font-size: 25px;
+    margin-left: 10px;
+    color: teal;
+}
 .navbar .nav-item{
     text-decoration: none;
     color: black;

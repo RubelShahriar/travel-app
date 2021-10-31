@@ -1,16 +1,17 @@
-.choose{
+.choose h2{
+    margin: 40px 0px;
 }
 .choose .flex{
     background: url('../images/choosebackground.png') no-repeat center;
     display: flex;
     justify-content: space-between;
-    padding: 60px 0;
+    padding: 70px 0;
 }
 .choose .flex .item{
     width: 24%;
     background: #304f47;
     border-radius: 5px;
-    padding: 30px;
+    padding: 50px;
 }
 .choose .flex .item .icon{
     font-size: 60px;

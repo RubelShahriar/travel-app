@@ -1,21 +1,29 @@
 .background{
     background: #e7eaf3;
 }
+.footer .logo span{
+    font-size: 25px;
+    margin-left: 10px;
+    color: teal;
+}
+.footer .logo p{
+    margin-top: 20px;
+}
 .footer{
     display: flex;
     justify-content: space-between;
     text-align: left;
-    margin-top: 100px;
     padding: 20px 0px;
     background-color: #e7eaf3;
 }
 .footer h3{
     margin-bottom: 30px;
+    font-size: 25px;
     position: relative;
 }
 .footer h3::after{
     width: 100px;
-    height: 3px;
+    height: 1px;
     background: orange;
     position: absolute;
     left: 0;
@@ -25,29 +33,57 @@
 .footer .logo{
     width: 30%;
 }
-.footer .logo img{
-    width: 100%;
-}
+.footer .logo .icon{
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 1px solid #f76570;
+    width: 45px;
+    height: 45px;
+    font-size: 10px;
+    color: #f76570;
+    padding: 10px;
+ }
+ .footer .logo .icon:hover{
+     background: #f76570;
+     color: white;
+     transition: .4s;
+ }
 .footer .departments{
-    width: 20%;
+    width: 15%;
+}
+.footer .opening p{
+    margin-bottom: -5px;
+}
+.footer .opening .example{
+    padding: 20px 0px;
+}
+.footer .opening .inner{
+    font-size: 20px;
+    margin-top: 10px;
+    margin-right: 15px;
+}
+.footer .opening .middle{
+    margin-top: 20px;
 }
 .footer .departments ul{
     padding-left: 0;
 }
 .footer .departments ul li{
     list-style: none;
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 .footer .opening{
-    width: 20%;
+    width: 25%;
 }
 .footer .opening .opening-flex{
     display: flex;
-    justify-content: space-between;
 }
 .footer .touch{
-    width: 20%;
+    width: 25%;
 }
 
+/* Responsive css part */
 @media screen and (max-width: 600px){
     .footer{
         display: block;

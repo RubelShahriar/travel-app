@@ -1,3 +1,10 @@
+.pacakge-details h2{
+    margin: 40px 0px;
+}
+.pacakge-details h3{
+    margin-bottom: 20px;
+    margin-top: -10px;
+}
 .pacakge-details .background{
     height: 200px;
     background: url('../images/PackageDetails.png') no-repeat center;
@@ -11,8 +18,21 @@
 .pacakge-details .details-flex .left{
     width: 55%;
 }
+.pacakge-details .details-flex .left span{
+    color: #f76570;
+}
+.pacakge-details .details-flex .left .may{
+    background: #f76570;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 20px;
+}
 .pacakge-details .details-flex .left img{
     width: 100%;
+    height: 400px;
 }
 .pacakge-details .details-flex .right{
     width: 40%;
@@ -24,4 +44,9 @@
     width: 300px;
     height: 40px;
     border-radius: 5px;
+}
+.pacakge-details .details-flex .right .booking{
+    background: #f76570;
+    border: none;
+    color: white;
 }

@@ -9,7 +9,7 @@ const ManageAllOrder = () => {
         .then(data => setManageOrder(data))
     }, [])
 
-    //DELETE AN USER
+    //DELETE AN USER 
     const handleDeletemanageOrder = id => {
         const confirm = window.confirm('Are you sure to delete?');
         if(confirm){
@@ -28,8 +28,8 @@ const ManageAllOrder = () => {
         }
     }
     return (
-        <div className='manageOrders'>
-            manageOrder: {manageOrder.length}
+        <div className='manage-orders'>
+            <h2>All Orders Are Here</h2>
             <div className='display'>
             {
                 manageOrder.map(manageOrder => 
@@ -41,7 +41,7 @@ const ManageAllOrder = () => {
                         <p>{manageOrder.place}</p>
                         <h4>{manageOrder.name}</h4>
                         <p>{manageOrder.amount}</p>
-                        <button onClick={() => handleDeletemanageOrder(manageOrder._id)}>Delete</button>
+                        <button className='button' onClick={() => handleDeletemanageOrder(manageOrder._id)}>Delete</button>
                     </div>
                 </div>) 
             }
