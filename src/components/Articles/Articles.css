@@ -56,3 +56,20 @@
     background: #f76570;
     color: white;
 }
+
+/* Responsive part css start */
+@media (min-width: 320px) and (max-width: 575px){
+    .articles .flex .item{
+        width: 100%;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px){
+    .articles .flex .item{
+        width: 100%;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .articles .flex .item{
+        width: 48%;
+    }
+}

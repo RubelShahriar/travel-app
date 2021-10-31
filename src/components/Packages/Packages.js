@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from 'react';
+import { Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Packages.css';
 
 const Packages = () => {
     const [packages, setPackages] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:4000/packages')
+        fetch('https://ghostly-blood-77078.herokuapp.com/packages')
         .then(res => res.json())
         .then(data => setPackages(data))
     }, [])
     return (
-        <div className='packages'>
+        <Container>
+            <div className='packages'>
             <h2>Our Populer Packages</h2>
             <div className='display'>
             {
@@ -29,6 +31,7 @@ const Packages = () => {
             }
             </div>
         </div>
+        </Container>
     );
 };
 

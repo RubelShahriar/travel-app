@@ -4,7 +4,7 @@ import './MyOrder.css';
 const MyOrder = () => {
     const [order, setOrder] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:4000/orders')
+        fetch('https://ghostly-blood-77078.herokuapp.com/orders')
         .then(res => res.json())
         .then(data => setOrder(data))
     }, [])
@@ -13,7 +13,7 @@ const MyOrder = () => {
     const handleDeleteOrder = id => {
         const confirm = window.confirm('Are you sure to delete?');
         if(confirm){
-            const url = `http://localhost:4000/orders/${id}`;
+            const url = `https://ghostly-blood-77078.herokuapp.com/${id}`;
         fetch(url, {
             method: 'delete',
         })

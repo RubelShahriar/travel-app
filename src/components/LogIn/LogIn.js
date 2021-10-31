@@ -2,6 +2,7 @@ import React from 'react';
 import { Button} from 'react-bootstrap';
 import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../hooks/useAuth';
+import './LogIn.css';
 
 const LogIn = () => {
     const location = useLocation();
@@ -23,9 +24,10 @@ const LogIn = () => {
         })
     }
     return (
-        <div>
-              <Button onClick={handleGoogleLogIn} variant="warning">login</Button>
-              <Button onClick={handleGithubLogIn} variant="warning">github login</Button>
+        <div className='login'>
+            <h4>Please LogIn</h4>
+              <Button className='button' onClick={handleGoogleLogIn} variant="warning">LogIn With Google</Button>
+              <Button className='button' onClick={handleGithubLogIn} variant="warning">LogIn With GitHub</Button>
         </div>
     );
 };

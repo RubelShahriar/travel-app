@@ -4,10 +4,12 @@ import image from '../images/blog-01.jpeg';
 import imageTwo from '../images/blog-02.jpeg';
 import imageThree from '../images/blog-03.jpeg';
 import imageFour from '../images/blog-04.jpeg';
+import { Container } from 'react-bootstrap';
 
 const Articles = () => {
     return (
-        <div className='articles'>
+        <Container>
+            <div className='articles'>
             <h2>ARTICLES & NEWS</h2>
             <div className='flex'>
                 <div className='item'>
@@ -56,6 +58,7 @@ const Articles = () => {
                 </div>
             </div>
         </div>
+        </Container>
     );
 };
 

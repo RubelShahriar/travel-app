@@ -4,7 +4,7 @@ import './ManageAllOrder.css';
 const ManageAllOrder = () => {
     const [manageOrder, setManageOrder] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:4000/orders')
+        fetch('https://ghostly-blood-77078.herokuapp.com/orders')
         .then(res => res.json())
         .then(data => setManageOrder(data))
     }, [])
@@ -13,7 +13,7 @@ const ManageAllOrder = () => {
     const handleDeletemanageOrder = id => {
         const confirm = window.confirm('Are you sure to delete?');
         if(confirm){
-            const url = `http://localhost:4000/manageOrders/${id}`;
+            const url = `https://ghostly-blood-77078.herokuapp.com/${id}`;
         fetch(url, {
             method: 'delete',
         })

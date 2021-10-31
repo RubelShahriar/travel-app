@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './PackageDetails.css';
-import image from '../images/DetailsTwo.png';
 import useAuth from '../../hooks/useAuth';
 import { useParams } from 'react-router';
 
@@ -10,7 +9,7 @@ const PackageDetails = () => {
     const {id} = useParams();
 
     useEffect( () => {
-        const url = `http://localhost:4000/packages/${id}`;
+        const url = `https://ghostly-blood-77078.herokuapp.com/${id}`;
         fetch(url)
         .then(res => res.json())
         .then(data => setPackageItem(data))
@@ -27,7 +26,7 @@ const PackageDetails = () => {
         const name = nameRef.current.value;
         const amount = amountRef.current.value;
         const packageInfo = {image, place, name, amount};
-        fetch('http://localhost:4000/orders', { 
+        fetch('https://ghostly-blood-77078.herokuapp.com/orders', { 
             method: 'post',
             headers:{
                 'content-type': 'application/json'

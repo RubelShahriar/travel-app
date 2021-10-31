@@ -27,3 +27,20 @@
     color: white;
     font-weight: 500;
 }
+
+/* Responsive css part  */
+@media (min-width: 320px) and (max-width: 575px){
+    .packages .display .item{
+        width: 100%;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px){
+    .packages .display .item{
+        width: 45%;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .packages .display .item{
+        width: 31%;
+    }
+}

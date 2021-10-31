@@ -30,6 +30,7 @@
     bottom: -10px;
     content: "";
 }
+/* ***************** */
 .footer .logo{
     width: 30%;
 }
@@ -48,6 +49,7 @@
      color: white;
      transition: .4s;
  }
+ /* ******************* */
 .footer .departments{
     width: 15%;
 }
@@ -73,31 +75,73 @@
     font-size: 18px;
     margin-bottom: 10px;
 }
+/* **************** */
 .footer .opening{
     width: 25%;
 }
 .footer .opening .opening-flex{
     display: flex;
 }
+/* **************** */
 .footer .touch{
     width: 25%;
 }
 
 /* Responsive css part */
-@media screen and (max-width: 600px){
+@media (min-width: 320px) and (max-width: 575px){
     .footer{
-        display: block;
+        flex-wrap: wrap;
     }
     .footer .logo{
         width: 100%;
+        margin-bottom: 20px;
     }
     .footer .departments{
-        width: 100%;
+        width: 40%;
     }
     .footer .opening{
-        width: 100%;
+        width: 56%;
     }
     .footer .touch{
         width: 100%;
+        margin-top: 20px;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px){
+    .footer{
+        flex-wrap: wrap;
+    }
+    .footer .logo{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .footer .departments{
+        width: 40%;
+    }
+    .footer .opening{
+        width: 56%;
+    }
+    .footer .touch{
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .footer{
+        flex-wrap: wrap;
+    }
+    .footer .logo{
+        width: 55%;
+        margin-bottom: 20px;
+    }
+    .footer .departments{
+        width: 35%;
+    }
+    .footer .opening{
+        width: 40%;
+    }
+    .footer .touch{
+        width: 56%;
+        margin-top: 20px;
     }
 }

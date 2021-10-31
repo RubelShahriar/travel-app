@@ -2,11 +2,13 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser,faHandshake, faImages, faSmile} from '@fortawesome/free-regular-svg-icons'
 import './ChooseUs.css';
+import { Container } from 'react-bootstrap';
 
 
 const ChooseUs = () => {
     return (
-        <div className='choose'>
+        <Container>
+            <div className='choose'>
             <h2>Why You Are Travel With Tourx</h2>
             <div className='flex'>
                 <div className='item'>
@@ -27,6 +29,7 @@ const ChooseUs = () => {
                 </div>
             </div>
         </div>
+        </Container>
     );
 };
 

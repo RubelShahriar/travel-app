@@ -50,3 +50,38 @@
     border: none;
     color: white;
 }
+
+/* Responsive part css start */
+@media (min-width: 320px) and (max-width: 575px){
+    .pacakge-details .details-flex .left{
+        width: 100%;
+    }
+    .pacakge-details .details-flex .right{
+        width: 100%;
+    }
+    .pacakge-details .details-flex{
+        flex-wrap: wrap;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px){
+    .pacakge-details .details-flex .left{
+        width: 50%;
+    }
+    .pacakge-details .details-flex .right{
+        width: 50%;
+    }
+    .pacakge-details .details-flex{
+        flex-wrap: wrap;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .pacakge-details .details-flex .left{
+        width: 50%;
+    }
+    .pacakge-details .details-flex .right{
+        width: 50%;
+    }
+    .pacakge-details .details-flex{
+        flex-wrap: wrap;
+    }
+}

@@ -27,7 +27,7 @@ const Header = () => {
                     Signed in as: <a href="#login">{user.displayName}</a>
                 </Navbar.Text>
                 {
-                    user.displayName ? 
+                    user.displayName || user.email ? 
                     <Button onClick={logOut} className='nav-item-color' variant="success">LogOut</Button> 
                     :
                     <Button onClick={signInWithGoogle} className='nav-item-color' variant="success">LogIn</Button>

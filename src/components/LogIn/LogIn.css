@@ -1,0 +1,26 @@
+.login h4{
+    margin-bottom: 30px;
+}
+.login{
+    padding: 100px 0px;
+    /* background: url('../images/addpackage004.jpeg') no-repeat center; */
+    /* background-size: cover; */
+}
+.login .button{
+    display: block;
+    margin:  0 auto;
+    margin-bottom: 20px;
+    background: white;
+    padding: 5px 40px;
+    border: 1px solid #f76570;
+    background: #f76570;
+    color: white;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.login .button:hover{
+    background: white;
+    color: #f76570;
+    transition: .4s;
+}
