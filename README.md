@@ -1,6 +1,6 @@
 # Getting Started Meditab Website
 
-This is our website you can visit [Our Meditab Website](https://modest-agnesi-ea87e9.netlify.app/log-in).
+This is our website you can visit [Our Meditab Website](https://zealous-bhaskara-09c56b.netlify.app/).
 
 ## Our Facilities
 
