@@ -1,0 +1,27 @@
+.pacakge-details .background{
+    height: 200px;
+    background: url('../images/PackageDetails.png') no-repeat center;
+    background-size: cover;
+    margin-bottom: 60px;
+}
+.pacakge-details .details-flex{
+    display: flex;
+    justify-content: space-between;
+}
+.pacakge-details .details-flex .left{
+    width: 55%;
+}
+.pacakge-details .details-flex .left img{
+    width: 100%;
+}
+.pacakge-details .details-flex .right{
+    width: 40%;
+}
+.pacakge-details .details-flex .right input{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+}

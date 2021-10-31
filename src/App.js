@@ -5,15 +5,14 @@ import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import PackageDetails from './components/PackgeDetails/PackageDetails';
 import MyOrder from './components/MyOrder/MyOrder';
-import Booking from './components/Booking/Booking';
 import LogIn from './components/LogIn/LogIn';
 import SignUp from './components/SignUp/SignUp';
 import AddPackage from './components/AddPackage/AddPackage';
-import ManageUser from './components/ManageUser/ManageUser';
 import NotFound from './components/NotFound/NotFound';
 import Footer from './components/Footer/Footer';
 import AuthProvider from './components/context/AuthProvider';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import ManageAllOrder from './components/ManageAllOrder/ManageAllOrder';
 
 function App() {
   return (
@@ -31,17 +30,14 @@ function App() {
             <PrivateRoute path='/my-order'>
               <MyOrder></MyOrder>
             </PrivateRoute>
-            <PrivateRoute path='/booking'>
-              <Booking></Booking>
-            </PrivateRoute>
-            <Route path='/package-details'>
+            <Route path='/package-details/:id'>
               <PackageDetails></PackageDetails>
             </Route>
             <Route path='/add-package'>
               <AddPackage></AddPackage>
             </Route>
-            <Route path='/manage-user'>
-              <ManageUser></ManageUser>
+            <Route path='/manage-all-order'>
+              <ManageAllOrder></ManageAllOrder>
             </Route>
             <Route path='/log-in'>
               <LogIn></LogIn>

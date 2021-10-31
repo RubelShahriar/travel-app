@@ -6,7 +6,6 @@ import './Header.css';
 
 const Header = () => {
     const {user, logOut,signInWithGoogle} = useAuth();
-    console.log(user)
     return (
         <Navbar bg="light" expand="lg">
             <Container>
@@ -17,7 +16,7 @@ const Header = () => {
                     <Link className='nav-item' to='/home'>Home</Link>
                     <Link className='nav-item' to='/my-order'>My Orders</Link>
                     <Link className='nav-item' to='/add-package'>Add Packages</Link>
-                    <Link className='nav-item' to='/manage-user'>Manage Users</Link>
+                    <Link className='nav-item' to='/manage-all-order'>Manage Orders</Link>
                     
                 </Nav>
                 <Navbar.Text className='nav-item'>

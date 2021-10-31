@@ -11,7 +11,7 @@ const AddPackage = () => {
         const name = nameRef.current.value;
         const amount = amountRef.current.value;
         const packageInfo = {image, place, name, amount};
-        fetch('http://localhost:4000/packages', {
+        fetch('http://localhost:4000/packages', { 
             method: 'post',
             headers:{
                 'content-type': 'application/json'

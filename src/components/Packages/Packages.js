@@ -23,8 +23,7 @@ const Packages = () => {
                         <p>{packages.place}</p>
                         <h4>{packages.name}</h4>
                         <p>{packages.amount}</p>
-                        <button>Details</button>
-                        <Link to='/Booking'>Book Now</Link>
+                        <Link to={`/package-details/${packages._id}`}><button>Details</button></Link>
                     </div>
                 </div>) 
             }

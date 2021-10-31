@@ -5,8 +5,7 @@ import useAuth from '../../hooks/useAuth';
 
 const LogIn = () => {
     const location = useLocation();
-    const {user, signInWithGoogle, signInWithGitHub} = useAuth();
-    console.log(user);
+    const {signInWithGoogle, signInWithGitHub} = useAuth();
     const history = useHistory();
     const redirect_uri = location.state?.from || '/home';
     const handleGoogleLogIn = () => {
