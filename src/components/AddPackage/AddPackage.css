@@ -1,27 +1,7 @@
-.add-package h2{
-    margin: 40px 0px;
-}
-.add-package{
-    background: url('../images/addpackage003.jpeg') no-repeat center;
-    background-size: cover;
-    padding: 60px 0px;
-}
-.add-package input{
+
+.add input{
     display: block;
-    margin: 0 auto;
-    margin-bottom: 30px;
-    width: 400px;
-    height: 50px;
-    border-radius: 5px;
-    /* background: transparent; */
-    border-color: teal;
-    border: none;
-    padding: 5px 10px;
+    margin-bottom: 25px;
+    width: 340px;
+    height: 40px;
 }
-.add-package .submit{
-    background: #f76570;
-    color: white;
-    font-size: 25px;
-    border-radius: 20px;
-    font-weight: 500;
-} 

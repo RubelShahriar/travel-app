@@ -1,13 +1,10 @@
-.packages h2{
-    margin: 40px 0px;
-}
+
 .packages .display{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
 .packages .display .item{
-    width: 23%;
-    border: 1px solid teal;
+    border: 1px solid gray;
     margin-bottom: 20px;
     border-radius: 10px;
     padding-bottom: 20px;
@@ -30,17 +27,17 @@
 
 /* Responsive css part  */
 @media (min-width: 320px) and (max-width: 575px){
-    .packages .display .item{
-        width: 100%;
+    .packages .display{
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 @media (min-width: 576px) and (max-width: 767px){
-    .packages .display .item{
-        width: 45%;
+    .packages .display{
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 @media (min-width: 768px) and (max-width: 991px){
-    .packages .display .item{
-        width: 31%;
+    .packages .display{
+        grid-template-columns: repeat(3, 1fr);
     }
 }

@@ -13,10 +13,9 @@ const Packages = () => {
     return (
         <Container>
             <div className='packages'>
-            <h2>Our Populer Packages</h2>
+            <h2 className='my-5 fs-1'>Our Populer Packages</h2>
             <div className='display'>
-            {
-                packages.map(packages => 
+            {packages.map(packages => 
                 <div className='item'>
                     <div className='image'>
                         <img src={packages.image} alt=''></img>
@@ -27,8 +26,8 @@ const Packages = () => {
                         <p>{packages.amount}</p>
                         <Link to={`/package-details/${packages._id}`}><button className='button'>Details</button></Link>
                     </div>
-                </div>) 
-            }
+                </div>
+                )}
             </div>
         </div>
         </Container>

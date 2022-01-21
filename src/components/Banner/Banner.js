@@ -1,13 +1,14 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
-
+import slideTwo from '../images/slide-2.jpeg'
 const Banner = () => {
     return (
         <Carousel>
   <Carousel.Item>
     <img
+      style={{height: '70vh'}}
       className="d-block w-100"
-      src="https://gotravel.qodeinteractive.com/wp-content/uploads/2016/04/slide-2.jpg"
+      src={slideTwo}
       alt="First slide"
     />
     <Carousel.Caption>
@@ -17,8 +18,9 @@ const Banner = () => {
   </Carousel.Item>
   <Carousel.Item>
     <img
+      style={{height: '70vh'}}
       className="d-block w-100"
-      src="https://gotravel.qodeinteractive.com/wp-content/uploads/2016/04/slide-2.jpg"
+      src={slideTwo}
       alt="Second slide"
     />
 
@@ -29,8 +31,9 @@ const Banner = () => {
   </Carousel.Item>
   <Carousel.Item>
     <img
+      style={{height: '70vh'}}
       className="d-block w-100"
-      src="https://gotravel.qodeinteractive.com/wp-content/uploads/2016/04/slide-2.jpg"
+      src={slideTwo}
       alt="Third slide"
     />
 
