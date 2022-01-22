@@ -11,7 +11,7 @@
     display: block;
     margin: 0 auto;
     margin-bottom: 20px;
-    width: 300px;
+    width: 350px;
     height: 40px;
     border-radius: 5px;
 }
@@ -19,6 +19,14 @@
     background: #f76570;
     border: none;
     color: white;
+}
+.pacakge-details .number::-webkit-outer-spin-button,
+.pacakge-details .number::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+.pacakge-details .number[type= number]{
+    -moz-appearance: textfield;
 }
 
 /* Responsive part css start */

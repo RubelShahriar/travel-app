@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Packages.css';
 
@@ -14,22 +14,27 @@ const Packages = () => {
         <Container>
             <div className='packages'>
             <h2 className='my-5 fs-1'>Our Populer Packages</h2>
-            <div className='display'>
-            {packages.map(packages => 
+            {!packages.length ?
+                <div className='d-flex justify-content-center align-items-center'>
+                    <Spinner animation="grow" variant='warning' />
+                </div> :
+                <div className='display'>
+                    {packages.map(packages => 
                 <div className='item'>
                     <div className='image'>
                         <img src={packages.image} alt=''></img>
                     </div>
                     <div>
-                        <p>{packages.place}</p>
+                        <p className='mt-1'>{packages.place}</p>
                         <h4>{packages.name}</h4>
-                        <p>{packages.amount}</p>
+                        <p>{`$${packages.amount}`}</p>
                         <Link to={`/package-details/${packages._id}`}><button className='button'>Details</button></Link>
                     </div>
                 </div>
                 )}
+                </div>
+                }
             </div>
-        </div>
         </Container>
     );
 };

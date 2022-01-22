@@ -5,8 +5,9 @@ import { useParams } from 'react-router';
 import { Container } from 'react-bootstrap';
 
 const PackageDetails = () => {
+    const [insertId, setInsertId] = useState('')
     const [packageItem, setPackageItem] = useState({});
-    const {image, place, name, amount} = packageItem
+    const {image, place, name, amount, description} = packageItem
     const {user} = useAuth();
     const {id} = useParams();
 
@@ -40,8 +41,8 @@ const PackageDetails = () => {
         })
         .then(res => res.json())
         .then(data => {
+            setInsertId(data)
             if(data.insertedId){
-                alert('Order Confirmed Successfully')
                 e.target.reset();
             }
         })
@@ -61,20 +62,28 @@ const PackageDetails = () => {
                         <p>Package Name: {name}</p>
                         <p className='mb-3'>Price: {amount}</p>
                         <p className='mb-3'>Place: {place}</p>
+                        <p className='mb-3'>Place: {description}</p>
                         <button>May its a greate value for you</button>
                     </div>
                     {/* middle div============================ */}
                     <div className='right'>
                         <div>
                             <form onSubmit={handleDetailsForm}>
-                            <input type="text" onChange={console.log()} value={user.displayName}></input>
-                            <input type="text" onChange={console.log()} value={user.email}></input>
-                            <input type="url" onChange={console.log()}  value={packageItem.image} ref={imageRef}></input>
-                            <input type="text" onChange={console.log()} value={packageItem.place} ref={placeRef}></input>
-                            <input type="text" onChange={console.log()} value={packageItem.name} ref={nameRef}></input>
-                            <input type="text" onChange={console.log()} value={packageItem.amount} ref={amountRef}></input>
+                                <input type="text" onChange={console.log()} value={user.displayName}></input>
+                                <input type="text" onChange={console.log()} value={user.email}></input>
+                                <input type="url" className='d-none' onChange={console.log()}  value={packageItem.image} ref={imageRef}></input>
+                                <input type="text" onChange={console.log()} value={packageItem.name} ref={nameRef}></input>
+                                <input type="text" onChange={console.log()} value={packageItem.place} ref={placeRef}></input>
+                                <input type="text" className='d-none' onChange={console.log()} value={`$${packageItem.amount}`} ref={amountRef}></input>
+                                <input type="number" className='number' placeholder='Enter Phone'></input>
+                                <input type="text" className='number' placeholder='Enter Address' ></input>
                                 <input type='submit' onChange={console.log()} className='booking' value='Book Now'></input>
                             </form>
+                            {insertId.insertedId && 
+                                <div style={{width: '350px'}} class="alert mx-auto alert-success" role="alert">
+                                    A simple success alert—check it out!
+                                </div>
+                            }
                         </div>
                     </div>
                 </div>
