@@ -1,9 +1,12 @@
 import React, { useRef, useState } from 'react';
 import { Container } from 'react-bootstrap';
+import useAuth from '../../hooks/useAuth';
 import image from '../images/web-images-tert.jpeg'
 import './AddPackage.css';
 
 const AddPackage = () => {
+    const {user} = useAuth()
+    const {displayName, email} = user
     const [id, setId] = useState('')
     const imageRef= useRef();
     const placeRef= useRef();
@@ -16,7 +19,7 @@ const AddPackage = () => {
         const name = nameRef.current.value;
         const amount = amountRef.current.value;
         const description = descRef.current.value;
-        const packageInfo = {image, place, name, amount, description};
+        const packageInfo = {image, place, name, amount, description, displayName, email};
         fetch('https://ghostly-blood-77078.herokuapp.com/packages', { 
             method: 'post',
             headers:{
@@ -34,7 +37,7 @@ const AddPackage = () => {
         e.preventDefault();
     }
     return (
-        <>
+        <div className='vh-100'>
             <h2 style={{color: '#2C3E50', marginTop: '40px'}}>Add a new package</h2>
             <Container>
                 <div className='add' style={{display: 'grid', gridTemplateColumns: '1fr 1fr', margin: '60px 0', background: '#F7F9F9', borderRadius: '10px', padding: '60px 0'}}>
@@ -51,15 +54,15 @@ const AddPackage = () => {
                             <input type="submit" className='submit border-0 bg-warning rounded-2 mb-0' value="Add Package"></input>
                         </form>
                     </div>
-                    {/* <div></div>
+                    <div></div>
                             {id.insertedId && 
                                 <div class="alert alert-success w-75" role="alert">
                                     A simple success alert—check it out!
                                 </div>
-                            } */}
+                            }
                     </div>
             </Container>
-        </>
+        </div>
     );
 };
 

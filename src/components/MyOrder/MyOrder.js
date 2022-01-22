@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Button, Container } from 'react-bootstrap';
 import './MyOrder.css';
 
 const MyOrder = () => {
@@ -13,7 +14,7 @@ const MyOrder = () => {
     const handleDeleteOrder = id => {
         const confirm = window.confirm('Are you sure to delete?');
         if(confirm){
-            const url = `https://ghostly-blood-77078.herokuapp.com/${id}`;
+            const url = `https://ghostly-blood-77078.herokuapp.com/orders/${id}`;
         fetch(url, {
             method: 'delete',
         })
@@ -29,25 +30,37 @@ const MyOrder = () => {
     }
     
     return (
-        <div className='orders'>
-            <h2>Your Orders</h2>
-            <div className='display'>
+        <Container>
+            <div className=''>
+            <h3 className='my-4'>Your Orders</h3>
+            <div>
             {
-                order.map(order => 
-                <div className='item'>
-                    <div className='image'>
-                        <img src={order.image} alt=''></img>
-                    </div>
-                    <div>
-                        <p>{order.place}</p> 
-                        <h4>{order.name}</h4>
-                        <p>{order.amount}</p>
-                        <button className='button' onClick={() => handleDeleteOrder(order._id)}>Delete Order</button>
-                    </div>
-                </div>) 
+                <table class="table">
+                    <thead className='mb-5 table-warning'>
+                        <tr>
+                        <th scope="col" className='fs-5'>Item</th>
+                        <th scope="col" className='fs-5'>name</th>
+                        <th scope="col" className='fs-5'>Place</th>
+                        <th scope="col" className='fs-5'>Price</th>
+                        <th scope="col" className='fs-5'>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                {order.map(order => 
+                        <tr>
+                        <td><img src={order.image} style={{height: '100px',width: '200px',borderRadius: '10px'}} alt=''></img></td>
+                        <td className='align-middle'><p className='fs-5'>{order.name}</p></td>
+                        <td className='align-middle'><p className='fs-5'>{order.place}</p></td>
+                        <td className='align-middle'><p className='fs-5'>{order.amount}</p></td>
+                        <td className='align-middle'><Button className='btn-secondary fs-5' onClick={() => handleDeleteOrder(order._id)}>Cancel Order</Button></td>
+                        </tr>
+                )}
+                </tbody>
+                </table>
             }
             </div>
-        </div>
+            </div>
+        </Container>
     );
 };
 

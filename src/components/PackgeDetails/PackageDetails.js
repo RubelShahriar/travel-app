@@ -9,6 +9,7 @@ const PackageDetails = () => {
     const [packageItem, setPackageItem] = useState({});
     const {image, place, name, amount, description} = packageItem
     const {user} = useAuth();
+    const {displayName, email} = user
     const {id} = useParams();
 
     useEffect( () => {
@@ -20,18 +21,20 @@ const PackageDetails = () => {
     },[])
 
 
-    const date = new Date()
+    const date = new Date().toLocaleDateString()
     const imageRef= useRef();
     const placeRef= useRef();
     const nameRef= useRef();
     const amountRef= useRef();
+    const phoneRef = useRef()
 
     const handleDetailsForm = e =>{
+        const phone = phoneRef.current.value
         const image= imageRef.current.value;
         const place= placeRef.current.value;
         const name = nameRef.current.value;
         const amount = amountRef.current.value;
-        const packageInfo = {image, place, name, amount};
+        const packageInfo = {image, displayName, email, phone, name, place, amount, date};
         fetch('https://ghostly-blood-77078.herokuapp.com/orders', { 
             method: 'post',
             headers:{
@@ -75,7 +78,7 @@ const PackageDetails = () => {
                                 <input type="text" onChange={console.log()} value={packageItem.name} ref={nameRef}></input>
                                 <input type="text" onChange={console.log()} value={packageItem.place} ref={placeRef}></input>
                                 <input type="text" className='d-none' onChange={console.log()} value={`$${packageItem.amount}`} ref={amountRef}></input>
-                                <input type="number" className='number' placeholder='Enter Phone'></input>
+                                <input type="number" className='number' placeholder='Enter Phone' ref={phoneRef}></input>
                                 <input type="text" className='number' placeholder='Enter Address' ></input>
                                 <input type='submit' onChange={console.log()} className='booking' value='Book Now'></input>
                             </form>

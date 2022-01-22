@@ -18,8 +18,8 @@ const Header = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ms-auto d-flex align-items-center vertical-align">
                     <Link className='nav-item' to='/home'>Home</Link>
-                    <Link className='nav-item' to='/my-order'>My Orders</Link>
                     <Link className='nav-item' to='/add-package'>Add Packages</Link>
+                    <Link className='nav-item' to='/my-order'>My Orders</Link>
                     <Link className='nav-item' to='/manage-all-order'>Manage Orders</Link>
                 <Navbar.Text className='nav-item'>
                     Signed in as: <a href="#." className='text-decoration-none'>{user.displayName}</a>

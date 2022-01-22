@@ -1,4 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { Button, Container } from 'react-bootstrap';
+import { faCaretDown, faTimes} from '@fortawesome/free-solid-svg-icons';
+import useAuth from '../../hooks/useAuth';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './ManageAllOrder.css';
 
 const ManageAllOrder = () => {
@@ -13,7 +17,7 @@ const ManageAllOrder = () => {
     const handleDeletemanageOrder = id => {
         const confirm = window.confirm('Are you sure to delete?');
         if(confirm){
-            const url = `https://ghostly-blood-77078.herokuapp.com/${id}`;
+            const url = `https://ghostly-blood-77078.herokuapp.com/orders/${id}`;
         fetch(url, {
             method: 'delete',
         })
@@ -28,25 +32,43 @@ const ManageAllOrder = () => {
         }
     }
     return (
-        <div className='manage-orders'>
-            <h2>All Orders Are Here</h2>
-            <div className='display'>
-            {
-                manageOrder.map(manageOrder => 
-                <div className='item'>
-                    <div className='image'>
-                        <img src={manageOrder.image} alt=''></img>
-                    </div>
-                    <div>
-                        <p>{manageOrder.place}</p>
-                        <h4>{manageOrder.name}</h4>
-                        <p>{manageOrder.amount}</p>
-                        <button className='button' onClick={() => handleDeletemanageOrder(manageOrder._id)}>Delete</button>
-                    </div>
-                </div>) 
-            }
+        <Container>
+            <div className='manage-orders vh-100'>
+                <h3 className='my-4' style={{color: '#34495E'}}>Order Management</h3>
+                <div>
+                {
+                    <table class="table">
+                        <thead className='table-warning'>
+                            <tr>
+                            <th scope="col" className='fs-6'><input type='checkbox'/></th>
+                            <th scope="col" className='fs-6'>OrderID<FontAwesomeIcon icon={faCaretDown} className='ms-1'/></th>
+                            <th scope="col" className='fs-6'>Date<FontAwesomeIcon icon={faCaretDown} className='ms-1'/></th>
+                            <th scope="col" className='fs-6'>Customer<FontAwesomeIcon icon={faCaretDown} className='ms-1'/></th>
+                            <th scope="col" className='fs-6'>Order<FontAwesomeIcon icon={faCaretDown} className='ms-1'/></th>
+                            <th scope="col" className='fs-6'>Place<FontAwesomeIcon icon={faCaretDown} className='ms-1'/></th>
+                            <th scope="col" className='fs-6'>Price<FontAwesomeIcon icon={faCaretDown} className='ms-1'/></th>
+                            <th scope="col" className='fs-6'>Delete<FontAwesomeIcon icon={faCaretDown} className='ms-1'/></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                    {manageOrder.map(order => 
+                            <tr>
+                            <td className='align-middle'><p className='fs-6'><input type='checkbox'/></p></td>
+                            <td className='align-middle'><p className='fs-6'>{order._id}</p></td>
+                            <td className='align-middle'><p className='fs-6'>{order.date}</p></td>
+                            <td className='align-middle'><p className='fs-6'>{order.displayName}</p></td>
+                            <td className='align-middle'><p className='fs-6'>{order.name}</p></td>
+                            <td className='align-middle'><p className='fs-6'>{order.place}</p></td>
+                            <td className='align-middle'><p className='fs-6'>{order.amount}</p></td>
+                            <td className='align-middle'><FontAwesomeIcon icon={faTimes} className='text-warning fs-4' title='delete' onClick={() => handleDeletemanageOrder(order._id)}/></td>
+                            </tr>
+                    )}
+                    </tbody>
+                    </table>
+                }
+                </div>
             </div>
-        </div>
+        </Container>
     );
 };
 
