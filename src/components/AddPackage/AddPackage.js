@@ -38,7 +38,7 @@ const AddPackage = () => {
     }
     return (
         <div className='vh-100'>
-            <h2 style={{color: '#2C3E50', marginTop: '40px'}}>Add a new package</h2>
+            <h3 style={{color: '#2C3E50', marginTop: '40px'}}>Add a new package</h3>
             <Container>
                 <div className='add' style={{display: 'grid', gridTemplateColumns: '1fr 1fr', margin: '60px 0', background: '#F7F9F9', borderRadius: '10px', padding: '60px 0'}}>
                     <div>

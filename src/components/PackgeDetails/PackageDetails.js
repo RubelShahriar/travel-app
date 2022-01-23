@@ -10,6 +10,7 @@ const PackageDetails = () => {
     const {image, place, name, amount, description} = packageItem
     const {user} = useAuth();
     const {displayName, email} = user
+    console.log(email)
     const {id} = useParams();
 
     useEffect( () => {

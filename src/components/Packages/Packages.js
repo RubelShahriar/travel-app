@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Spinner } from 'react-bootstrap';
+import { Button, Container, Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Packages.css';
 
@@ -28,7 +28,7 @@ const Packages = () => {
                         <p className='mt-1'>{packages.place}</p>
                         <h4>{packages.name}</h4>
                         <p>{`$${packages.amount}`}</p>
-                        <Link to={`/package-details/${packages._id}`}><button className='button'>Details</button></Link>
+                        <Link to={`/package-details/${packages._id}`}><Button variant='warning' className='rounded-pill px-4'>Details</Button></Link>
                     </div>
                 </div>
                 )}

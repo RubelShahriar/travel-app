@@ -1,10 +1,9 @@
 .navbar .nav-item{
     text-decoration: none;
-    color: black;
-    margin-left: 30px;
+    margin-right: 30px;
     font-weight: 400;
     font-size: 18px;
-    color: #727475;
+    color: #1C2833;
 
 }
 .navbar-toggler{

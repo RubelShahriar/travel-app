@@ -1,8 +1,11 @@
 import React from 'react';
-import { Button} from 'react-bootstrap';
+import { Button, Container} from 'react-bootstrap';
 import { useHistory, useLocation } from 'react-router';
+import {faGooglePlusSquare, faGithubSquare} from '@fortawesome/free-brands-svg-icons'
 import useAuth from '../../hooks/useAuth';
+import image from '../images/log.png'
 import './LogIn.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const LogIn = () => {
     const location = useLocation();
@@ -24,11 +27,24 @@ const LogIn = () => {
         })
     }
     return (
-        <div className='login'>
-            <h4>Please LogIn</h4>
-              <Button className='button' onClick={handleGoogleLogIn} variant="warning">LogIn With Google</Button>
-              <Button className='button' onClick={handleGithubLogIn} variant="warning">LogIn With GitHub</Button>
-        </div>
+        <Container>
+            <div style={{display: 'grid', gridTemplateColumns: '1fr 2fr 1fr', height: '80vh', margin: '50px'}}>
+                <div></div>
+                <div style={{ background: '#f1f1f1', borderRadius: '10px', }}>
+                    <img src={image} alt='' style={{width: '100%', height: '300px'}}/>
+                    <h3 className='mb-5'>Please Login</h3>
+                    <Button className='w-75 mb-3 d-flex justify-content-around mx-auto' onClick={handleGoogleLogIn} variant="primary">
+                        <FontAwesomeIcon icon={faGooglePlusSquare} className='fs-2'/>
+                        <p className='my-auto'>LogIn With Google</p>
+                    </Button>
+                    <Button className='w-75 d-flex justify-content-around mx-auto' onClick={handleGithubLogIn} variant="primary">
+                        <FontAwesomeIcon icon={faGithubSquare} className='fs-2'/>
+                        <p className='my-auto'>LogIn with GitHub</p>
+                    </Button>
+                </div>
+                <div></div>
+            </div>
+        </Container>
     );
 };
 

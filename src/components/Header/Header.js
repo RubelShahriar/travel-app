@@ -21,14 +21,14 @@ const Header = () => {
                     <Link className='nav-item' to='/add-package'>Add Packages</Link>
                     <Link className='nav-item' to='/my-order'>My Orders</Link>
                     <Link className='nav-item' to='/manage-all-order'>Manage Orders</Link>
-                <Navbar.Text className='nav-item'>
+                {user.displayName && <Navbar.Text className='nav-item'>
                     Signed in as: <a href="#." className='text-decoration-none'>{user.displayName}</a>
-                </Navbar.Text>
+                </Navbar.Text>}
                 {
                     user.displayName || user.email ? 
-                    <Button onClick={logOut} className='bg-warning d-inline ms-2 fs-6 border-0' variant="success">LogOut</Button> 
+                    <Button onClick={logOut}variant="primary">LogOut</Button> 
                     :
-                    <Button onClick={signInWithGoogle} className='bg-warning d-inline ms-2 fs-6 border-0' variant="success">LogIn</Button>
+                    <Button onClick={signInWithGoogle}variant="primary">LogIn</Button>
                 }
                 </Nav>
                 </Navbar.Collapse>

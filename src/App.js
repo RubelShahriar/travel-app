@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import PackageDetails from './components/PackgeDetails/PackageDetails';
@@ -33,12 +32,12 @@ function App() {
             <PrivateRoute path='/package-details/:id'>
               <PackageDetails></PackageDetails>
             </PrivateRoute>
-            <Route path='/add-package'>
+            <PrivateRoute path='/add-package'>
               <AddPackage></AddPackage>
-            </Route>
-            <Route path='/manage-all-order'>
+            </PrivateRoute>
+            <PrivateRoute path='/manage-all-order'>
               <ManageAllOrder></ManageAllOrder>
-            </Route>
+            </PrivateRoute>
             <Route path='/log-in'>
               <LogIn></LogIn>
             </Route>
