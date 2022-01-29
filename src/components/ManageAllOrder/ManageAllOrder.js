@@ -6,6 +6,7 @@ import './ManageAllOrder.css';
 
 const ManageAllOrder = () => {
     const [manageOrder, setManageOrder] = useState([]);
+    const [checked, setChecked] = useState(false)
     useEffect(() => {
         fetch('https://ghostly-blood-77078.herokuapp.com/orders')
         .then(res => res.json())
@@ -14,6 +15,10 @@ const ManageAllOrder = () => {
     //change status after click
     const changeStatus= (e) => {
         e.target.innerText = 'active'
+    }
+    //toggle checkboxes
+    const toggleCheckbox = () => {
+        setChecked(prevState => !prevState)
     }
 
     //DELETE AN USER 
@@ -44,7 +49,7 @@ const ManageAllOrder = () => {
                     <table className="table">
                         <thead className='table-warning'>
                             <tr>
-                            <th scope="col" className='fs-6'><input type='checkbox'/></th>
+                            <th scope="col" className='fs-6'><input type='checkbox' checked={checked}/></th>
                             <th scope="col" className='fs-6'>OrderID<FontAwesomeIcon icon={faCaretDown} className='ms-1'/></th>
                             <th scope="col" className='fs-6'>Date<FontAwesomeIcon icon={faCaretDown} className='ms-1'/></th>
                             <th scope="col" className='fs-6'>Customer<FontAwesomeIcon icon={faCaretDown} className='ms-1'/></th>
