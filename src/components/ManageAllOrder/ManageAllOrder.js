@@ -49,7 +49,7 @@ const ManageAllOrder = () => {
                     <table className="table">
                         <thead className='table-warning'>
                             <tr>
-                            <th scope="col" className='fs-6'><input type='checkbox' checked={checked}/></th>
+                            <th scope="col" className='fs-6'><input type='checkbox' onClick={toggleCheckbox}/></th>
                             <th scope="col" className='fs-6'>OrderID<FontAwesomeIcon icon={faCaretDown} className='ms-1'/></th>
                             <th scope="col" className='fs-6'>Date<FontAwesomeIcon icon={faCaretDown} className='ms-1'/></th>
                             <th scope="col" className='fs-6'>Customer<FontAwesomeIcon icon={faCaretDown} className='ms-1'/></th>
@@ -63,7 +63,7 @@ const ManageAllOrder = () => {
                         <tbody>
                     {manageOrder.map(order =>
                             <tr>
-                            <td className='align-middle'><p className='fs-6'><input type='checkbox'/></p></td>
+                            <td className='align-middle'><p className='fs-6'><input type='checkbox' checked={checked}/></p></td>
                             <td className='align-middle'><p className='fs-6'>{order._id}</p></td>
                             <td className='align-middle'><p className='fs-6'>{order.date}</p></td>
                             <td className='align-middle'><p className='fs-6'>{order.displayName}</p></td>
