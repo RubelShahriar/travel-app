@@ -28,18 +28,18 @@ const LogIn = () => {
     }
     return (
         <Container>
-            <div style={{display: 'grid', gridTemplateColumns: '1fr 2fr 1fr', height: '80vh', margin: '50px'}}>
+            <div className='login-travel'>
                 <div></div>
                 <div style={{ background: '#f1f1f1', borderRadius: '10px', }}>
                     <img src={image} alt='' style={{width: '100%', height: '300px'}}/>
                     <h3 className='mb-5'>Please Login</h3>
                     <Button className='w-75 mb-3 d-flex justify-content-around mx-auto' onClick={handleGoogleLogIn} variant="primary">
-                        <FontAwesomeIcon icon={faGooglePlusSquare} className='fs-2'/>
-                        <p className='my-auto'>LogIn With Google</p>
+                        <FontAwesomeIcon icon={faGooglePlusSquare} className='fs-1'/>
+                        <p className='my-auto fs-5'>LogIn With Google</p>
                     </Button>
                     <Button className='w-75 d-flex justify-content-around mx-auto' onClick={handleGithubLogIn} variant="primary">
-                        <FontAwesomeIcon icon={faGithubSquare} className='fs-2'/>
-                        <p className='my-auto'>LogIn with GitHub</p>
+                        <FontAwesomeIcon icon={faGithubSquare} className='fs-1'/>
+                        <p className='my-auto fs-5'>LogIn with GitHub</p>
                     </Button>
                 </div>
                 <div></div>

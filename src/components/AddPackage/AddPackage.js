@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { Container } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import useAuth from '../../hooks/useAuth';
 import image from '../images/web-images-tert.jpeg'
 import './AddPackage.css';
@@ -40,27 +40,26 @@ const AddPackage = () => {
         <div className='vh-100'>
             <h3 style={{color: '#2C3E50', marginTop: '40px'}}>Add a new package</h3>
             <Container>
-                <div className='add' style={{display: 'grid', gridTemplateColumns: '1fr 1fr', margin: '60px 0', background: '#F7F9F9', borderRadius: '10px', padding: '60px 0'}}>
-                    <div>
-                        <img src={image} style={{height: '500px'}} className='w-75 rounded-3'  alt=''></img>
-                    </div>
-                    <div className='d-flex w-75  justify-content-center align-items-center' style={{background: '#f1f1f1', borderRadius: '10px'}}>
-                        <form onSubmit={handleAddPackage}>
-                            <input type="url" placeholder="Enter Image URL" ref={imageRef} required></input>
-                            <input type="text" placeholder="Enter Place" ref={placeRef} required></input>
-                            <input type="text" placeholder="Enter Name" ref={nameRef} required></input>
-                            <input type="text" placeholder="Enter Amount" ref={amountRef} required></input>
-                            <input type="text" placeholder="Enter Description" ref={descRef} required></input>
-                            <input type="submit" className='submit border-0 bg-warning rounded-2 mb-0' value="Add Package"></input>
-                        </form>
-                    </div>
-                    <div></div>
+                    <Row className='add' style={{ margin: '60px 0', background: '#F7F9F9', borderRadius: '10px', padding: '60px 0'}}>
+                        <Col sm={12} md={6} lg={6}>
+                            <img src={image} style={{height: '500px'}} className='w-75 rounded-3'  alt=''></img>
+                        </Col>
+                        <Col sm={12} md={6} lg={6}  style={{background: '#f1f1f1', borderRadius: '10px',display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                            <form onSubmit={handleAddPackage}>
+                                <input type="url" placeholder="Enter Image URL" ref={imageRef} required></input>
+                                <input type="text" placeholder="Enter Place" ref={placeRef} required></input>
+                                <input type="text" placeholder="Enter Name" ref={nameRef} required></input>
+                                <input type="text" placeholder="Enter Amount" ref={amountRef} required></input>
+                                <input type="text" placeholder="Enter Description" ref={descRef} required></input>
+                                <input type="submit" className='submit border-0 bg-warning rounded-2 mb-0' value="Add Package"></input>
+                            </form>
+                        </Col>
+                    </Row>
                             {id.insertedId && 
-                                <div class="alert alert-success w-75" role="alert">
-                                    A simple success alert—check it out!
+                                <div class="alert mx-auto alert-success w-75" role="alert">
+                                    Package Added SuccessFully
                                 </div>
                             }
-                    </div>
             </Container>
         </div>
     );

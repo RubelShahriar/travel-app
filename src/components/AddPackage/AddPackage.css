@@ -5,3 +5,35 @@
     width: 340px;
     height: 40px;
 }
+/* Responsive part css start */
+@media (min-width: 320px) and (max-width: 575px){
+    .add img{
+        height: 350px !important;
+        width: 100% !important;
+        margin-bottom: 20px !important;
+    }
+    .add .alert{
+        width: 100% !important;
+        margin-top: 20px;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px){
+    .choose .flex .item{
+        width: 48%;
+        display: block;
+        margin-bottom: 10px;
+    }
+    .choose .flex{
+        flex-wrap: wrap;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .choose .flex .item{
+        width: 32%;
+        display: block;
+        margin-bottom: 10px;
+    }
+    .choose .flex{
+        flex-wrap: wrap;
+    }
+}
