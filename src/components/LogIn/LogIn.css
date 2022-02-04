@@ -4,31 +4,3 @@
     margin: 50px;
     height: 90vh;
 }
-/* Responsive part css start */
-@media (min-width: 320px) and (max-width: 575px){
-    .login-travel{
-        grid-template-columns: 1fr;
-        height: 100vh;
-        margin: 0;
-    }
-}
-@media (min-width: 576px) and (max-width: 767px){
-    .choose .flex .item{
-        width: 48%;
-        display: block;
-        margin-bottom: 10px;
-    }
-    .choose .flex{
-        flex-wrap: wrap;
-    }
-}
-@media (min-width: 768px) and (max-width: 991px){
-    .choose .flex .item{
-        width: 32%;
-        display: block;
-        margin-bottom: 10px;
-    }
-    .choose .flex{
-        flex-wrap: wrap;
-    }
-}

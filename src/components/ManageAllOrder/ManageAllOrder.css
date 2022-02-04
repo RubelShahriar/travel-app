@@ -1,0 +1,41 @@
+.manage-order .user{
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+.manage-order .mobile{
+    display: none;
+}
+/* Responsive part css start */
+@media (min-width: 320px) and (max-width: 575px){
+    .manage-order{
+        background-color: #f1f1f1;
+    }
+    .manage-order .mobile{
+        display: block;
+    }
+    .manage-order .wide{
+        display: none;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px){
+    .manage-order{
+        background-color: #f1f1f1;
+    }
+    .manage-order .mobile{
+        display: block;
+    }
+    .manage-order .wide{
+        display: none;
+    }
+}
+@media (min-width: 768px) and (max-width: 900px){
+    .manage-order{
+        background-color: #f1f1f1;
+    }
+    .manage-order .mobile{
+        display: block;
+    }
+    .manage-order .wide{
+        display: none;
+    }
+}

@@ -3,12 +3,11 @@
 }
 .choose .flex{
     background: url('../images/choosebackground.png') no-repeat center;
-    display: flex;
-    justify-content: space-between;
-    padding: 70px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 .choose .flex .item{
-    width: 24%;
     background: #304f47;
     border-radius: 5px;
     padding: 50px;
@@ -26,33 +25,20 @@
 
 /* Responsive part css start */
 @media (min-width: 320px) and (max-width: 575px){
-    .choose .flex .item{
-        width: 100%;
-        display: block;
-        margin-bottom: 10px;
-    }
     .choose .flex{
-        flex-wrap: wrap;
-        padding: 10px 0;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
     }
 }
 @media (min-width: 576px) and (max-width: 767px){
-    .choose .flex .item{
-        width: 48%;
-        display: block;
-        margin-bottom: 10px;
-    }
     .choose .flex{
-        flex-wrap: wrap;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
     }
 }
 @media (min-width: 768px) and (max-width: 991px){
-    .choose .flex .item{
-        width: 32%;
-        display: block;
-        margin-bottom: 10px;
-    }
     .choose .flex{
-        flex-wrap: wrap;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
     }
 }

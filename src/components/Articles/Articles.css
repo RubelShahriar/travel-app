@@ -2,25 +2,24 @@
     margin: 40px 0px;
 }
 .articles .flex{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 .articles .flex .item{
-    display: flex;
-    width: 49%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     border: 1px solid #a3a3a3;
-    margin-bottom: 20px;
 }
 .articles .flex .item .image{
-    width: 50%;
+    width: 100%;
 }
 .articles .flex .item .image img{
     width: 100%;
     height: 300px;
 }
 .articles .flex .item .text{
-    width: 50%;
+    width: 100%;
     padding: 30px 20px;
     text-align: left;
     color: #a3a3a3;
@@ -59,17 +58,28 @@
 
 /* Responsive part css start */
 @media (min-width: 320px) and (max-width: 575px){
+    .articles .flex{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
     .articles .flex .item{
-        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        border: 1px solid #a3a3a3;
     }
 }
 @media (min-width: 576px) and (max-width: 767px){
+    .articles .flex{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
     .articles .flex .item{
-        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        border: 1px solid #a3a3a3;
     }
 }
 @media (min-width: 768px) and (max-width: 991px){
-    .articles .flex .item{
-        width: 48%;
+    .articles .flex{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
     }
 }

@@ -1,0 +1,31 @@
+/* Responsive part css start */
+@media (min-width: 320px) and (max-width: 575px){
+    .my-order{
+        background-color: #f1f1f1;
+    }
+    .my-order .mobile{
+        display: block;
+    }
+    .my-order .general{
+        display: none;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px){
+    .my-order{
+        background-color: #f1f1f1;
+    }
+    .my-order .mobile{
+        display: block;
+    }
+    .my-order .general{
+        display: none;
+    }
+}
+@media (min-width: 768px){
+    .my-order{
+        background-color: white;
+    }
+    .my-order .mobile{
+        display: none;
+    }
+}

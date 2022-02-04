@@ -9,7 +9,7 @@ const Banner = () => {
         <Carousel className='banner'>
   <Carousel.Item>
     <img
-      style={{height: '90vh'}}
+      style={{height: '95vh'}}
       className="d-block w-100"
       src={slideTwo}
       alt="First slide"
@@ -21,7 +21,7 @@ const Banner = () => {
   </Carousel.Item>
   <Carousel.Item>
     <img
-      style={{height: '90vh'}}
+      style={{height: '95vh'}}
       className="d-block w-100"
       src={slideOwo}
       alt="Second slide"
@@ -34,7 +34,7 @@ const Banner = () => {
   </Carousel.Item>
   <Carousel.Item>
     <img
-      style={{height: '90vh'}}
+      style={{height: '95vh'}}
       className="d-block w-100"
       src={slideThree}
       alt="Third slide"
