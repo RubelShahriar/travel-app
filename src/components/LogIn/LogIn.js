@@ -35,11 +35,11 @@ const LogIn = () => {
                     <h3 className='mb-5'>Please Login</h3>
                     <Button className='w-75 mb-3 d-flex justify-content-around mx-auto' onClick={handleGoogleLogIn} variant="primary">
                         <FontAwesomeIcon icon={faGooglePlusSquare} className='fs-1'/>
-                        <p className='my-auto fs-5'>LogIn With Google</p>
+                        <p className='my-auto fs-5 '>LogIn With Google</p>
                     </Button>
                     <Button className='w-75 d-flex justify-content-around mx-auto' onClick={handleGithubLogIn} variant="primary">
                         <FontAwesomeIcon icon={faGithubSquare} className='fs-1'/>
-                        <p className='my-auto fs-5'>LogIn with GitHub</p>
+                        <p className='my-auto fs-5 '>LogIn with GitHub</p>
                     </Button>
                 </div>
                 <div></div>

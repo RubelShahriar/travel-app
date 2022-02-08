@@ -4,3 +4,26 @@
     margin: 50px;
     height: 90vh;
 }
+
+/* Responsive part css start */
+@media (min-width: 320px) and (max-width: 575px){
+    .login-travel{
+        grid-template-columns: 1fr;
+        margin: 0px;
+        height: 70vh;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px){
+    .login-travel{
+        grid-template-columns: 1fr;
+        margin: 20px;
+        height: 70vh;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .login-travel{
+        grid-template-columns: 1fr;
+        margin: 30px;
+        height: 70vh;
+    }
+}
