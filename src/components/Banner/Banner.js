@@ -1,8 +1,8 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
-import slideOwo from '../images/pexels-photo-1662549.jpeg'
-import slideTwo from '../images/pexels-photo-1006321.jpeg'
-import slideThree from '../images/pexels-photo-338504.jpeg'
+import slideOne from '../images/travel5.jpg'
+import slideThree from '../images/travel3.jpg'
+import slideTwo from '../images/travel7.jpg'
 import './Banner.css'
 const Banner = () => {
     return (
@@ -11,7 +11,7 @@ const Banner = () => {
     <img
       style={{height: '95vh'}}
       className="d-block w-100"
-      src={slideTwo}
+      src={slideOne}
       alt="First slide"
     />
     <Carousel.Caption>
@@ -23,7 +23,7 @@ const Banner = () => {
     <img
       style={{height: '95vh'}}
       className="d-block w-100"
-      src={slideOwo}
+      src={slideThree}
       alt="Second slide"
     />
 
@@ -36,7 +36,7 @@ const Banner = () => {
     <img
       style={{height: '95vh'}}
       className="d-block w-100"
-      src={slideThree}
+      src={slideTwo}
       alt="Third slide"
     />
 
