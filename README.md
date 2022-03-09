@@ -1,6 +1,6 @@
 ## Getting Started with TripFinder Website
 
-This is our website you can visit [Our Meditab Website](https://travel-resort-react.netlify.app/).
+This is our website you can visit [Our TripFinder Website](https://travel-resort-react.netlify.app/).
 
 ### Top Features for this website
 
